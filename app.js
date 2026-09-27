@@ -1,6 +1,7 @@
 "use strict";
 
 const amountInput = document.querySelector("#amount");
+const clearAmountButton = document.querySelector("#clear-amount");
 const rateInput = document.querySelector("#rate");
 const results = document.querySelector("#results");
 const quickRates = document.querySelectorAll("[data-rate]");
@@ -88,6 +89,15 @@ function restoreInput(input, key, minimum) {
 restoreInput(amountInput, "amount", 0);
 restoreInput(rateInput, "annualRate", -100);
 amountInput.addEventListener("input", calculate);
+clearAmountButton.addEventListener("pointerdown", event => {
+  // 保留原本的輸入焦點，避免手機鍵盤因點擊按鈕而收起。
+  if (event.isPrimary && event.button === 0) event.preventDefault();
+});
+clearAmountButton.addEventListener("click", () => {
+  amountInput.value = "";
+  amountInput.focus();
+  calculate();
+});
 rateInput.addEventListener("input", calculate);
 for (const button of quickRates) {
   button.addEventListener("click", () => {

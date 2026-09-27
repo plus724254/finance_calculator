@@ -29,6 +29,7 @@ button { min-height: 44px; border: 1px solid var(--border); border-radius: 8px; 
 button:hover { border-color: var(--accent); color: var(--accent); }
 button.selected { background: var(--tint); border-color: var(--accent); color: var(--accent); font-weight: 600; }
 button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.clear-amount { flex: 0 0 auto; min-width: 44px; min-height: 44px; padding: 0 6px; border: 0; background: transparent; font-size: 13px; touch-action: manipulation; }
 .hint, .message { margin: 8px 0 0; font-size: 12px; }
 .hint { color: var(--muted); }
 .message { color: var(--warning); overflow-wrap: anywhere; }

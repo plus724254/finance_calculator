@@ -1,6 +1,6 @@
 "use strict";
 
-const CACHE_NAME = "opportunity-cost-v1";
+const CACHE_NAME = "opportunity-cost-v2";
 const APP_SHELL = ["./", "./index.html", "./style.css", "./app.js", "./manifest.webmanifest", "./icons/icon-192.png", "./icons/icon-512.png"];
 
 self.addEventListener("install", event => {
